@@ -7,10 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#C4C4C4</color>
     <color name="pbTint">#CA4546</color>
     <color name="secondoryColor">#1C1C26</color>
     <color name="pbBackground">#C4C4C4</color>
     <color name="AppBackground">#121212</color>
-    <color name ="rvClassItem">#1C1C26</color>
+    <color name="rvClassItem">#1C1C26</color>
+    <color name="navigationBar">#181818</color>
     <color name="tag">#2D2D3A</color>
 </resources>
