@@ -6,12 +6,15 @@
         <entry key="app/src/main/res/drawable/code_block.xml" value="0.2615" />
         <entry key="app/src/main/res/drawable/ic_fi_home.xml" value="0.245" />
         <entry key="app/src/main/res/drawable/ic_fi_sword.xml" value="0.245" />
+        <entry key="app/src/main/res/drawable/ic_fw_sword.xml" value="0.3125" />
         <entry key="app/src/main/res/drawable/ic_white_java.xml" value="0.2615" />
         <entry key="app/src/main/res/drawable/ic_white_js.xml" value="0.2615" />
         <entry key="app/src/main/res/drawable/round_rec_tangle_shape.xml" value="0.244" />
+        <entry key="app/src/main/res/layout/activity_challenge_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_class_item.xml" value="0.34375" />
         <entry key="app/src/main/res/layout/activity_language_selection.xml" value="0.34103260869565216" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_selection_item.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.2390625" />
         <entry key="app/src/main/res/menu/bottom_navigation_bar.xml" value="0.2390625" />
       </map>

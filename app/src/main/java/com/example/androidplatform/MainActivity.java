@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.example.androidplatform.adapters.ChallengeAdapter;
 import com.example.androidplatform.adapters.ClassAdapter;
+import com.example.androidplatform.model.ChallengeModel;
 import com.example.androidplatform.model.ClassModel;
 
 import java.util.ArrayList;
@@ -20,9 +22,10 @@ import io.noties.markwon.Markwon;
 public class MainActivity extends AppCompatActivity {
 
     //IU components
-    private RecyclerView rvClass;
-    private TextView codeBlock;
+    private RecyclerView rvClass, rvChallenge;
+
     private ArrayList<ClassModel> classModel = new ArrayList<>();
+    private ArrayList<ChallengeModel> challengeModel = new ArrayList<>();
     private Context context = MainActivity.this;
 
     @Override
@@ -35,29 +38,32 @@ public class MainActivity extends AppCompatActivity {
 
         //RecyclerView
         rvClass = findViewById(R.id.rvRecyclerView);
-        codeBlock = findViewById(R.id.tvCodeblock);
+        rvChallenge = findViewById(R.id.rvRecyclerView2);
         setValue();
-
-        //markdown
-        final Markwon markwon = Markwon.create(context);
-        String test = "```" +
-                "print('Hello, world!')" + "\n" + "num_sqrt = num ** 0.5\n" +
-                "print('The square root of %0.3f is %0.3f'%(num ,num_sqrt))";
-        markwon.setMarkdown(codeBlock, test);
-
+        setAdapter();
 
     }
 
     private void setValue(){
 
         //when data comes from db or api i need to iterate throught then add data to the model.
-
         classModel.add(new ClassModel("Хичээл", "Javascript", getString(R.string.paragraph), R.drawable.ic_white_js, 10));
         classModel.add(new ClassModel("Хичээл", "Java", getString(R.string.paragraph), R.drawable.ic_white_java, 50));
         classModel.add(new ClassModel("Хичээл", "Python", getString(R.string.paragraph), R.drawable.ic_white_python, 60));
+
+        challengeModel.add(new ChallengeModel("Эвент болон callback функц", "Java", R.drawable.java_icon, "Хоёрдахь нь өмнөх Java аппаас ирсэн гүйлгээний мэдээллийг хүлээн авч татварын газрын сэрвэр рүү дамжуулах үүрэгтэй windows сэрвэр дээр ажиллах windows service юм. Энэ сэрвисийг бид C# хэл ашиглан бүтээх ба уг сэрвэрийг унтрааж"));
+        challengeModel.add(new ChallengeModel("Эвент болон callback функц", "JavaScript", R.drawable.js_icon, "Хоёрдахь нь өмнөх Java аппаас ирсэн гүйлгээний мэдээллийг хүлээн авч татварын газрын сэрвэр рүү дамжуулах үүрэгтэй windows сэрвэр дээр ажиллах windows service юм. Энэ сэрвисийг бид C# хэл ашиглан бүтээх ба уг сэрвэрийг унтрааж"));
+
+    }
+
+    private void setAdapter() {
         ClassAdapter classAdapter = new ClassAdapter(classModel, context);
         rvClass.setAdapter(classAdapter);
         rvClass.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        ChallengeAdapter challengeAdapter = new ChallengeAdapter(challengeModel, context);
+        rvChallenge.setAdapter(challengeAdapter);
+        rvChallenge.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
 
 
