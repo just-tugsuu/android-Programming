@@ -8,8 +8,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
-import android.widget.TextView;
 
 import com.example.androidplatform.adapters.ChallengeAdapter;
 import com.example.androidplatform.adapters.ClassAdapter;
@@ -19,8 +17,6 @@ import com.example.androidplatform.model.ClassModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
-
-import io.noties.markwon.Markwon;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,13 +29,12 @@ public class MainActivity extends AppCompatActivity {
     private Context context = MainActivity.this;
     private static final  int ACTIVITY_NUM = 0;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Change windows color
-        updateStatusBar();
 
         //RecyclerView
         rvClass = findViewById(R.id.rvRecyclerView);
@@ -47,13 +42,12 @@ public class MainActivity extends AppCompatActivity {
         setValue();
         setAdapter();
 
-        //navigationBar
+//        navigationBar
         bottomNavigationView = findViewById(R.id.bnNavigation);
         BottomNavigationHelper.enableNavigation(context, bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
-
 
     }
 
@@ -76,11 +70,8 @@ public class MainActivity extends AppCompatActivity {
         ChallengeAdapter challengeAdapter = new ChallengeAdapter(challengeModel, context);
         rvChallenge.setAdapter(challengeAdapter);
         rvChallenge.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+
+
     }
 
-
-
-    public void updateStatusBar(){
-        getWindow().setStatusBarColor(0xFF1C1C26);
-    }
 }
