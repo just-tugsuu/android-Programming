@@ -6,13 +6,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.Window;
 import android.widget.TextView;
 
 import com.example.androidplatform.adapters.ChallengeAdapter;
 import com.example.androidplatform.adapters.ClassAdapter;
+import com.example.androidplatform.helper.BottomNavigationHelper;
 import com.example.androidplatform.model.ChallengeModel;
 import com.example.androidplatform.model.ClassModel;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -23,10 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
     //IU components
     private RecyclerView rvClass, rvChallenge;
-
+    private BottomNavigationView bottomNavigationView;
     private ArrayList<ClassModel> classModel = new ArrayList<>();
     private ArrayList<ChallengeModel> challengeModel = new ArrayList<>();
     private Context context = MainActivity.this;
+    private static final  int ACTIVITY_NUM = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
         rvChallenge = findViewById(R.id.rvRecyclerView2);
         setValue();
         setAdapter();
+
+        //navigationBar
+        bottomNavigationView = findViewById(R.id.bnNavigation);
+        BottomNavigationHelper.enableNavigation(context, bottomNavigationView);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
+        menuItem.setChecked(true);
+
 
     }
 
@@ -67,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private void updateStatusBar(){
+    public void updateStatusBar(){
         getWindow().setStatusBarColor(0xFF1C1C26);
     }
 }
