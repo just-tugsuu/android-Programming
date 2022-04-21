@@ -51,8 +51,7 @@ public class MainActivity extends AppCompatActivity {
         classModel.add(new ClassModel("Хичээл", "Java", getString(R.string.paragraph), R.drawable.ic_white_java, 50));
         classModel.add(new ClassModel("Хичээл", "Python", getString(R.string.paragraph), R.drawable.ic_white_python, 60));
 
-        challengeModel.add(new ChallengeModel("Эвент болон callback функц", "Java", R.drawable.java_icon, "Хоёрдахь нь өмнөх Java аппаас ирсэн гүйлгээний мэдээллийг хүлээн авч татварын газрын сэрвэр рүү дамжуулах үүрэгтэй windows сэрвэр дээр ажиллах windows service юм. Энэ сэрвисийг бид C# хэл ашиглан бүтээх ба уг сэрвэрийг унтрааж"));
-        challengeModel.add(new ChallengeModel("Эвент болон callback функц", "JavaScript", R.drawable.js_icon, "Хоёрдахь нь өмнөх Java аппаас ирсэн гүйлгээний мэдээллийг хүлээн авч татварын газрын сэрвэр рүү дамжуулах үүрэгтэй windows сэрвэр дээр ажиллах windows service юм. Энэ сэрвисийг бид C# хэл ашиглан бүтээх ба уг сэрвэрийг унтрааж"));
+        challengeModel.add(new ChallengeModel("Эвент болон callback функц", "Java", R.drawable.ic_java_icon, "Хоёрдахь нь өмнөх Java аппаас ирсэн гүйлгээний мэдээллийг хүлээн авч татварын газрын сэрвэр рүү дамжуулах үүрэгтэй windows сэрвэр дээр ажиллах windows service юм. Энэ сэрвисийг бид C# хэл ашиглан бүтээх ба уг сэрвэрийг унтрааж"));
 
     }
 
