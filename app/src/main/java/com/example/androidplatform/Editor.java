@@ -19,5 +19,6 @@ public class Editor extends AppCompatActivity {
         codeView = findViewById(R.id.codeView);
         codeView.setEnableLineNumber(true);
         codeView.setLineNumberTextColor(getResources().getColor(R.color.white));
+
     }
 }

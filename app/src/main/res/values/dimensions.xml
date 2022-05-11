@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fontMaxSize"> 21sp </dimen>
+    <dimen name="fontBigSize"> 18sp </dimen>
+    <dimen name="fontMediumSize"> 16sp </dimen>
+    <dimen name="fontSmallSize"> 14sp </dimen>
+</resources>

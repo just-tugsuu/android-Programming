@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.androidplatform.CourseActivity;
 import com.example.androidplatform.MainActivity;
 import com.example.androidplatform.R;
 import com.example.androidplatform.model.LanguageModel;
@@ -48,7 +47,7 @@ public class LanguageSelectionAdapter extends RecyclerView.Adapter<LanguageSelec
     @Override
     public LanguageSelectionAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.activity_language_item, parent, false);
+        View view = inflater.inflate(R.layout.language_item, parent, false);
         return new LanguageSelectionAdapter.ViewHolder(view);
     }
 

@@ -17,7 +17,7 @@
         android:fontFamily="@font/ibm_plex_mono"
         android:gravity="top|start"
         android:textColor="@color/white"
-        android:textSize="13sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,6 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
+        android:dropDownWidth="150dp"
+        android:dropDownHorizontalOffset="0dp"
         android:src="@drawable/ic_icon_run"
         android:backgroundTint="@color/green"
         app:layout_constraintEnd_toEndOf="parent"
