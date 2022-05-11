@@ -1,6 +1,7 @@
 package com.example.androidplatform.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +10,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.androidplatform.CourseActivity;
+import com.example.androidplatform.MainActivity;
 import com.example.androidplatform.R;
 import com.example.androidplatform.model.ClassModel;
 
@@ -30,6 +34,7 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> 
         private TextView tvClassTag,  tvTitle, tvDescribtion;
         private ImageView ivIcon;
         private ProgressBar pbBar;
+        private ConstraintLayout layout;
 
         public ViewHolder(@NonNull View view) {
             super(view);
@@ -39,6 +44,7 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> 
             tvDescribtion = view.findViewById(R.id.rvDescription);
             pbBar = view.findViewById(R.id.pbTaskloading);
             ivIcon = view.findViewById(R.id.ivIcon);
+            layout = view.findViewById(R.id.classLayout);
         }
     }
 
@@ -62,6 +68,10 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder> 
         holder.tvTitle.setText(classModel.get(position).getTitle());
         holder.tvDescribtion.setText(classModel.get(position).getDescription());
         holder.pbBar.setProgress(classModel.get(position).getProgress());
+        holder.layout.setOnClickListener(view -> {
+            Intent intent = new Intent(context, CourseActivity.class);
+            context.startActivity(intent);
+        });
     }
 
     @Override

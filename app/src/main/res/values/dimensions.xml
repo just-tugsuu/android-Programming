@@ -4,4 +4,8 @@
     <dimen name="fontBigSize"> 18sp </dimen>
     <dimen name="fontMediumSize"> 16sp </dimen>
     <dimen name="fontSmallSize"> 14sp </dimen>
+    <dimen name="dimen10dp"> 10dp </dimen>
+    <dimen name="dimen15dp"> 15dp </dimen>
+    <dimen name="dimen25dp"> 25dp </dimen>
+    <dimen name="dimen35dp"> 35dp </dimen>
 </resources>
