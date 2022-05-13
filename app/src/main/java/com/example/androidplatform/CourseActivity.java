@@ -2,6 +2,7 @@ package com.example.androidplatform;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,12 +22,19 @@ public class CourseActivity extends AppCompatActivity {
    private ArrayList <CourseItems> Model = new ArrayList<>();
    private RecyclerView rvCourse;
    private Context context = CourseActivity.this;
+   private ImageView backBtn;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course);
 
         rvCourse = findViewById(R.id.rvCourses);
+        backBtn = findViewById(R.id.back_btn);
+
+        backBtn.setOnClickListener(view -> {
+            finish();
+        });
 
         filler();
         setAdapter();
