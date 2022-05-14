@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
 //        navigationBar
         bottomNavigationView = findViewById(R.id.bnNavigation);
-        BottomNavigationHelper.enableNavigation(context, bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+        BottomNavigationHelper.enableNavigation(context, bottomNavigationView);
 
     }
 

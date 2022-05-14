@@ -3,14 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/drawable/divider.xml" value="0.196" />
+        <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/drawable/round_rec_tangle_shape.xml" value="0.196" />
         <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/activity_challenge_item.xml" value="0.2056159420289855" />
         <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/activity_class_item.xml" value="0.2056159420289855" />
         <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/activity_course.xml" value="0.25" />
+        <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/activity_course_detail.xml" value="0.34739583333333335" />
         <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/activity_editor.xml" value="0.2056159420289855" />
         <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/activity_language_item.xml" value="0.2056159420289855" />
         <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/activity_language_selection.xml" value="0.2056159420289855" />
+        <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/activity_login.xml" value="0.34739583333333335" />
         <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/activity_main.xml" value="0.2056159420289855" />
+        <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/activity_onboard.xml" value="0.25" />
+        <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/challenge_item.xml" value="0.34739583333333335" />
+        <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/class_item.xml" value="0.34739583333333335" />
+        <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/course_item.xml" value="0.34739583333333335" />
         <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/course_list.xml" value="0.34739583333333335" />
+        <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/kata_item.xml" value="0.34739583333333335" />
+        <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/language_item.xml" value="0.34739583333333335" />
+        <entry key="..\:/Users/Mizu/StudioProjects/android-Programming/app/src/main/res/layout/toolbar.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/code_block.xml" value="0.2615" />
         <entry key="app/src/main/res/drawable/ic_fi_home.xml" value="0.245" />
         <entry key="app/src/main/res/drawable/ic_fi_sword.xml" value="0.245" />
