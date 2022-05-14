@@ -14,8 +14,8 @@ public class LoginActiviy extends AppCompatActivity {
 
 
     @Override
-    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         toolbarTitle = findViewById(R.id.toolbarTitle);
