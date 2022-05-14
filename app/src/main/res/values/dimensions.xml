@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="font40sp"> 40sp </dimen>
     <dimen name="fontMaxSize"> 21sp </dimen>
     <dimen name="fontBigSize"> 18sp </dimen>
     <dimen name="fontMediumSize"> 16sp </dimen>
@@ -8,4 +9,5 @@
     <dimen name="dimen15dp"> 15dp </dimen>
     <dimen name="dimen25dp"> 25dp </dimen>
     <dimen name="dimen35dp"> 35dp </dimen>
+    <dimen name="dimen50dp"> 50dp </dimen>
 </resources>

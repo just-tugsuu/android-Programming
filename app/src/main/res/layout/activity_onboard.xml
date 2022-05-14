@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackground"
+    >
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ibm_plex_mono_bold"
+        android:text="Algorithms"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font40sp"
+        app:layout_constraintBottom_toTopOf="@+id/preLoginBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_icons"
+        android:layout_marginTop="@dimen/dimen25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/preLoginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/dimen25dp"
+        android:layout_marginEnd="@dimen/dimen25dp"
+        android:layout_marginBottom="@dimen/dimen15dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/ibm_plex_mono_semibold"
+        android:text="Нэвтрэх"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/fontMediumSize"
+        app:cornerRadius="@dimen/dimen10dp"
+        app:layout_constraintBottom_toTopOf="@+id/preSignup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/preSignup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cornerRadius="@dimen/dimen10dp"
+        android:layout_marginStart="@dimen/dimen25dp"
+        android:layout_marginEnd="@dimen/dimen25dp"
+        android:layout_marginBottom="@dimen/dimen25dp"
+        android:textSize="@dimen/fontMediumSize"
+        android:textAllCaps="false"
+        android:text="Шинэ хэрэглэгч"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/stroke"
+        android:fontFamily="@font/ibm_plex_mono_semibold"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/darkgray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.example.androidplatform;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,7 @@ public class CourseActivity extends AppCompatActivity {
 
    private ArrayList <CourseItems> Model = new ArrayList<>();
    private RecyclerView rvCourse;
+   private TextView tbTitle;
    private Context context = CourseActivity.this;
    private ImageView backBtn;
 
@@ -31,10 +33,14 @@ public class CourseActivity extends AppCompatActivity {
 
         rvCourse = findViewById(R.id.rvCourses);
         backBtn = findViewById(R.id.back_btn);
+        tbTitle = findViewById(R.id.toolbarTitle);
 
+        // Iim redundant code - iig bagasgah ..
         backBtn.setOnClickListener(view -> {
             finish();
         });
+
+        tbTitle.setText("Python програмчлалын хэл");
 
         filler();
         setAdapter();

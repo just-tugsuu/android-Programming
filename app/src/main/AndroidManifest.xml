@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidPlatform">
         <activity
-            android:name=".LanguageSelectionActivity"
+            android:name=".onBoardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,8 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".CourseActivity" />
         <activity android:name=".Editor" />
-
+        <activity android:name=".LoginActiviy" />
+        <activity android:name=".LanguageSelectionActivity" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
