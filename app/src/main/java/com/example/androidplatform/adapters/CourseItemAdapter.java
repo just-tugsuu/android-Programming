@@ -1,6 +1,7 @@
 package com.example.androidplatform.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,8 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.androidplatform.CourseDetailActivity;
 import com.example.androidplatform.R;
 import com.example.androidplatform.model.CourseItems;
 
@@ -24,12 +27,15 @@ public class CourseItemAdapter extends RecyclerView.Adapter<CourseItemAdapter.Vi
 
         private ImageView checkIcon;
         private TextView LineNumber, CourseItem;
+        private ConstraintLayout Layout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             LineNumber = itemView.findViewById(R.id.rvListNumber);
             CourseItem = itemView.findViewById(R.id.rvCourseItems);
+            Layout = itemView.findViewById(R.id.courseListLayout);
             checkIcon = itemView.findViewById(R.id.rvCourseCheck) ;
+
         }
     }
 
@@ -51,6 +57,10 @@ public class CourseItemAdapter extends RecyclerView.Adapter<CourseItemAdapter.Vi
         holder.LineNumber.setText(Model.get(position).getLineNumbers());
         holder.CourseItem.setText(Model.get(position).getCourseItem());
         holder.checkIcon.setImageResource(Model.get(position).getIcon());
+        holder.Layout.setOnClickListener(view -> {
+            Intent intent = new Intent(context, CourseDetailActivity.class);
+            context.startActivity(intent);
+        });
 
     }
 
