@@ -48,7 +48,6 @@ public class LoginActiviy extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-
         toolbarTitle = findViewById(R.id.toolbarTitle);
         backbtn = findViewById(R.id.back_btn);
         GoogleLoginBtn = findViewById(R.id.loginAsGoogleBtn);
@@ -60,20 +59,14 @@ public class LoginActiviy extends AppCompatActivity {
 
         gsc = GoogleSignIn.getClient(this, gso);
 
-
         backbtn.setOnClickListener(view -> {
             finish();
         });
 
-
         GoogleLoginBtn.setOnClickListener(view -> {
             signIn();
         });
-
-
-
     }
-
 
 
     private void signIn() {

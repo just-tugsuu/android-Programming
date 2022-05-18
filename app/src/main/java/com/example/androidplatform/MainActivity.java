@@ -47,12 +47,11 @@ public class MainActivity extends AppCompatActivity {
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
-        BottomNavigationHelper.enableNavigation(context, bottomNavigationView);
+        BottomNavigationHelper.enableNavigation(context, bottomNavigationView, "Home");
 
     }
 
     private void setValue(){
-
         //when data comes from db or api i need to iterate throught then add data to the model.
         classModel.add(new ClassModel("Хичээл", "Javascript", getString(R.string.paragraph), R.drawable.ic_white_js, 10));
         classModel.add(new ClassModel("Хичээл", "Java", getString(R.string.paragraph), R.drawable.ic_white_java, 50));

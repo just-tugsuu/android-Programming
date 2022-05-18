@@ -3,6 +3,7 @@
     package="com.example.androidplatform">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,15 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidPlatform">
         <activity
-            android:name=".onBoardingActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".onBoardingActivity"/>
         <activity android:name=".CourseActivity" />
         <activity android:name=".Editor" />
         <activity android:name=".LoginActiviy" />

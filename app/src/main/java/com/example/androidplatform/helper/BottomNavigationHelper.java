@@ -12,12 +12,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BottomNavigationHelper {
 
-    public static void enableNavigation(final Context context, BottomNavigationView view) {
+    public static void enableNavigation(final Context context, BottomNavigationView view, String location) {
         view.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.nv_home:
                     Intent intent = new Intent(context, MainActivity.class);
-                    context.startActivity(intent);
+                    if(location != "Home") {
+                        context.startActivity(intent);
+                    }
                     break;
                 case R.id.nv_items:
                     Intent intent1 = new Intent(context, Editor.class);
