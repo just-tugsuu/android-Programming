@@ -5,22 +5,44 @@
     android:layout_height="match_parent"
     android:background="@color/AppBackground">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/AppBackground"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <ImageView
+        android:id="@+id/back_btn2"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_arrow" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
     <com.amrdeveloper.codeview.CodeView
         android:id="@+id/codeView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginStart="20dp"
         android:background="@color/AppBackground"
         android:dropDownWidth="150dp"
         android:dropDownHorizontalOffset="0dp"
         android:dropDownSelector="@color/purple_500"
-        android:fontFamily="@font/ibm_plex_mono"
+        android:fontFamily="@font/ibm_plex_mono_medium"
         android:gravity="top|start"
-        android:textColor="@color/white"
-        android:textSize="14sp"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/fontMediumSize"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

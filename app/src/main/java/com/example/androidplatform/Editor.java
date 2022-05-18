@@ -1,9 +1,13 @@
 package com.example.androidplatform;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -23,6 +27,8 @@ public class Editor extends AppCompatActivity {
 
     private CodeView codeView;
     private FloatingActionButton runBtn;
+    private ImageView back_btn;
+    private Context context = Editor.this;
 //    @POST("/.netlify/functions/enforceCode")
 //    @FormUrlEncoded
 
@@ -33,10 +39,16 @@ public class Editor extends AppCompatActivity {
         setContentView(R.layout.activity_editor);
 
         codeView = findViewById(R.id.codeView);
+        back_btn = findViewById(R.id.back_btn2);
         runBtn = findViewById(R.id.fab);
 
         codeView.setEnableLineNumber(true);
         codeView.setLineNumberTextColor(getResources().getColor(R.color.white));
+
+        back_btn.setOnClickListener(view -> {
+            finish();
+        });
+
 
         runBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,29 +58,28 @@ public class Editor extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void sendData() {
         APIService apiService = RetrofitClient.getClient("https://codexweb.netlify.app").create(APIService.class);
         Editable userCode = codeView.getText();
         String userInput = userCode.toString();
-        CodeModel codeModel = new CodeModel(userInput, "py", "");
+        CodeModel codeModel = new CodeModel(userInput   , "py", "");
         Call<CodeModel> call = apiService.codeData(codeModel);
         call.enqueue(new Callback<CodeModel>() {
             @Override
             public void onResponse(Call<CodeModel> call, Response<CodeModel> response) {
                 if(response.isSuccessful()) {
-                    Log.d("Editor", "Ok this is at least worked");
-                    Log.d("Editor", response.body().getLanguage());
-                    Log.d("Editor", response.body().getSourceCode());
-                    Log.d("Editor", response.body().getOutput());
+                    Intent intent = new Intent(context, outputActivity.class);
+                    intent.putExtra("output", response.body().getOutput());
+                    startActivity(intent);
                 }
             }
 
             @Override
             public void onFailure(Call<CodeModel> call, Throwable t) {
                 Log.d("Editor", "No this is not working bro");
+                Toast toast = Toast.makeText(context, "Хүсэлт амжилтгүй боллоо", Toast.LENGTH_SHORT);
             }
         });
     }

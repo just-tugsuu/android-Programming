@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackground">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <include layout="@layout/toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/toolbarStroke"
+            android:layout_gravity="bottom"/>
+
+    </LinearLayout>
+
+<!--    <com.amrdeveloper.codeview.CodeView-->
+<!--        android:id="@+id/codeView2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:background="@color/AppBackground"-->
+<!--        android:dropDownWidth="150dp"-->
+<!--        android:clickable="false"-->
+<!--        android:dropDownHorizontalOffset="0dp"-->
+<!--        android:dropDownSelector="@color/purple_500"-->
+<!--        android:fontFamily="@font/ibm_plex_mono_medium"-->
+<!--        android:gravity="top|start"-->
+<!--        android:textColor="@color/gray"-->
+<!--        android:textSize="@dimen/fontMediumSize"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />-->
+
+    <TextView
+        android:id="@+id/codeView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/ibm_plex_mono_medium"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/fontMediumSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
