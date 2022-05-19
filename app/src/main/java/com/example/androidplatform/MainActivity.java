@@ -69,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
         ChallengeAdapter challengeAdapter = new ChallengeAdapter(challengeModel, context);
         rvChallenge.setAdapter(challengeAdapter);
         rvChallenge.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-
-
     }
 
 }

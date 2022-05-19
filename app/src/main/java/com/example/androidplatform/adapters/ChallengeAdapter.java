@@ -1,6 +1,7 @@
 package com.example.androidplatform.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,8 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.androidplatform.KataActvity;
 import com.example.androidplatform.R;
 import com.example.androidplatform.model.ChallengeModel;
 
@@ -23,6 +26,7 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView icon;
         private TextView tag, title, description;
+        private ConstraintLayout layout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -30,6 +34,7 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
             tag = itemView.findViewById(R.id.rvClassTag2);
             title = itemView.findViewById(R.id.rvTitle2);
             description = itemView.findViewById(R.id.rvDescription2);
+            layout = itemView.findViewById(R.id.challengeList);
         }
     }
 
@@ -52,6 +57,11 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
         holder.tag.setText(Model.get(position).getTag());
         holder.title.setText(Model.get(position).getTitle());
         holder.description.setText(Model.get(position).getDescription());
+        holder.layout.setOnClickListener(view -> {
+            Intent intent = new Intent(context, KataActvity.class);
+            intent.putExtra("languageType", Model.get(position).getTag());
+            context.startActivity(intent);
+        });
     }
 
     @Override

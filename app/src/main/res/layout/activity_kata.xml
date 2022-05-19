@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/AppBackground">
+
+    <include layout="@layout/toolbar" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="@dimen/dimen25dp"
+        android:backgroundTint="@color/pbTint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_mono_medium"
+            android:text="Заавал мэдэх"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/kataTitle"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen25dp"
+        android:fontFamily="@font/ibm_plex_mono_medium"
+        android:text="Обьктын функцтэй ажиллах"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fontMediumSize"
+        app:layout_constraintStart_toStartOf="@+id/tag"
+        app:layout_constraintTop_toBottomOf="@+id/tag" />
+
+
+    <TextView
+        android:id="@+id/Markdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ibm_plex_mono_medium"
+        android:layout_marginStart="@dimen/dimen25dp"
+        android:layout_marginEnd="@dimen/dimen25dp"
+        android:layout_marginTop="@dimen/dimen15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kataTitle" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ChallengeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Оролдож үзэх"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/darkgray"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/stroke"
+        android:textSize="@dimen/fontMediumSize"
+        android:fontFamily="@font/ibm_plex_mono_bold"
+        android:layout_marginBottom="@dimen/dimen25dp"
+        android:layout_marginEnd="@dimen/dimen25dp"
+        android:layout_marginStart="@dimen/dimen25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

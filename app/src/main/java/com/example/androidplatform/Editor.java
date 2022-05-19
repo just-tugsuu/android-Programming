@@ -29,6 +29,7 @@ public class Editor extends AppCompatActivity {
     private FloatingActionButton runBtn;
     private ImageView back_btn;
     private Context context = Editor.this;
+    private String languageType;
 //    @POST("/.netlify/functions/enforceCode")
 //    @FormUrlEncoded
 
@@ -49,6 +50,16 @@ public class Editor extends AppCompatActivity {
             finish();
         });
 
+        languageType = getIntent().getStringExtra("type");
+        languageType = (languageType == null) ? "py" : languageType;
+
+        if(languageType.equals("java")) {
+            codeView.setText("public class program{\n" +
+                    "                    public static void main(String [] args){\n" +
+                    "                        System.out.println(\"Hello world\");\n" +
+                    "                      }\n" +
+                    "                    }");
+        }
 
         runBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +75,9 @@ public class Editor extends AppCompatActivity {
         APIService apiService = RetrofitClient.getClient("https://codexweb.netlify.app").create(APIService.class);
         Editable userCode = codeView.getText();
         String userInput = userCode.toString();
-        CodeModel codeModel = new CodeModel(userInput   , "py", "");
+
+
+        CodeModel codeModel = new CodeModel(userInput, languageType, "");
         Call<CodeModel> call = apiService.codeData(codeModel);
         call.enqueue(new Callback<CodeModel>() {
             @Override
